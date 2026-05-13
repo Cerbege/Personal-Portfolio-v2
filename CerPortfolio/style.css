@@ -1,0 +1,163 @@
+:root {
+    --bg: #050505;
+    --accent: #00f2ff;
+    --text: #ffffff;
+    --gray: #888;
+    --nav-bg: rgba(0, 0, 0, 0.9);
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+nav {
+    background: var(--nav-bg);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #111;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+.logo { font-weight: 800; letter-spacing: -1px; }
+.logo span { color: var(--accent); }
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #111 0%, #050505 100%);
+}
+
+.personal-info {
+    margin-bottom: 20px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.personal-info .name { color: var(--accent); }
+.personal-info .divider { color: #333; }
+.personal-info .location i { margin-right: 5px; color: var(--accent); }
+
+.sub-title { color: var(--accent); letter-spacing: 4px; font-size: 12px; margin-bottom: 20px; }
+.hero h1 { font-size: 4.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 25px; }
+.hero p { color: var(--gray); max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; }
+
+.btn {
+    padding: 15px 40px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.4s;
+    margin: 0 10px;
+}
+
+.btn:hover { background: var(--accent); color: #000; box-shadow: 0 0 30px rgba(0,242,255,0.3); }
+
+.projects { padding: 100px 0; }
+.section-title { text-align: center; margin-bottom: 60px; font-size: 2.5rem; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    height: 380px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border: 1px solid #222;
+    overflow: hidden;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    transition: 0.4s;
+}
+
+.project-card:hover .project-overlay { background: rgba(0,0,0,0.5); }
+
+.project-info span { color: var(--accent); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.project-info h3 { font-size: 1.5rem; margin: 5px 0 15px; }
+.view-link { color: #fff; text-decoration: none; font-size: 14px; border-bottom: 1px solid var(--accent); }
+
+.card-burger { background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800'); }
+.card-lion { background-image: url('img.png/lion.jpg'); }
+.card-fitness { background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800'); }
+
+
+footer {
+    padding: 50px 0;
+    border-top: 1px solid #111;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-socials { display: flex; gap: 20px; }
+.footer-socials a { color: var(--gray); font-size: 1.2rem; transition: 0.3s; }
+.footer-socials a:hover { color: var(--accent); }
+
+
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    .footer-content { flex-direction: column; gap: 20px; }
+    .nav-links a {color: white;}
+}

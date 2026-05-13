@@ -1,6 +1,4 @@
-Anladım, bu README içeriği tamamen projenin kendisine odaklanmalı ve sanki açık kaynaklı (open-source) profesyonel bir ürün sunuyormuşsun gibi hissettirmeli. Bu, projeyi inceleyen başka geliştiricilere veya teknik işe alım uzmanlarına senin kod kaliteni ve dökümantasyon yeteneğini kanıtlar.
 
-İşte projenin teknik detaylarına, mimarisine ve özelliklerine odaklanan profesyonel README.md içeriği:
 
 Markdown
 # ⚡ Modern & Sharp Personal Portfolio Engine
